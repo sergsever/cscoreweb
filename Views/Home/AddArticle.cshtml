@@ -1,0 +1,14 @@
+﻿@page
+<html>
+<head>
+    <title>AddArticle</title>
+</head>
+<body>
+    <p>Add an article.</p>
+    <form method="post" action=@Url.Action("Add", "Articles")>
+        <label >Title:</label><input type="text" name="title" /><br />
+        <label>Content:</label><input type="text" name="content" /><br />
+        <input type="submit" value="Add" />
+    </form>
+</body>
+</html>
