@@ -1,11 +1,20 @@
-﻿@page
+﻿@model IEnumerable<cscoreweb.Data.Entities.Article>
+
 <html>
 <head>
     <title>Articles</title>
 </head>
 <body>
-    <p>Articles</p>
+
+    <h2>Articles</h2>
+    <div class="text-center">
+    @foreach (var article in @Model)
+    {
+        <div class="text-center">
+        <h3>@article.Title</h3>
+        <p align="center">@article.Content</p>
+        </div>
+    }
+</div>
 </body>
-
-
 </html>

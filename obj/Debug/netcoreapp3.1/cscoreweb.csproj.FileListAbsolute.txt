@@ -77,3 +77,5 @@ C:\workt\cscoreweb\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.
 C:\workt\cscoreweb\obj\Debug\netcoreapp3.1\cscoreweb.csproj.CoreCompileInputs.cache
 C:\workt\cscoreweb\obj\Debug\netcoreapp3.1\cscoreweb.MvcApplicationPartsAssemblyInfo.cache
 C:\workt\cscoreweb\bin\Debug\netcoreapp3.1\global.json
+C:\workt\cscoreweb\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\workt\cscoreweb\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll

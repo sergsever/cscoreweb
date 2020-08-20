@@ -21,8 +21,15 @@ namespace cscoreweb.Controllers
 		[HttpPost]
 		public async Task<IActionResult> AddArticle(string title, string content)
 		{
-			Article article = new Article() { Title = title, Content = content, Created = DateTime.Now };
-			dao.Add(article);
+			try
+			{
+				Article article = new Article() { Title = title, Content = content, Created = DateTime.Now };
+				dao.Add(article);
+			}
+			catch(Exception e)
+			{
+				throw e;
+			}
 			return Ok("Succesfull");
 		}
 	

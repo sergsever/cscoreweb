@@ -22,10 +22,13 @@ namespace cscoreweb
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddControllers();
-			services.AddControllersWithViews();
+//			services.AddControllers();
+//			services.AddControllersWithViews();
 			services.AddRazorPages();
-//			services.AddMvc();
+			services.AddMvc(options =>
+			{
+				options.EnableEndpointRouting = false;
+			});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,15 +45,15 @@ namespace cscoreweb
 			app.UseStaticFiles();
 
 			app.UseRouting();
-	/*		
-						app.UseEndpoints(endpoints =>
-						{
-							endpoints.MapRazorPages();
-							endpoints.MapControllers();
-						}
-						);
-			
-*/
+			/*		
+								app.UseEndpoints(endpoints =>
+								{
+									endpoints.MapRazorPages();
+									endpoints.MapControllers();
+								}
+								);
+
+		*/
 			//			app.UseAuthorization();
 			/*
 						app.UseMvc(routes =>
@@ -60,24 +63,28 @@ namespace cscoreweb
 							}
 						);   
 			*/
-//			app.UseDefaultFiles();
-//			app.UseStaticFiles();
+			//			app.UseDefaultFiles();
+			//			app.UseStaticFiles();
+			/*
+						app.UseEndpoints(endpoints =>
+						{
+							endpoints.MapControllers();
 
-			app.UseEndpoints(endpoints =>
+							endpoints.MapControllerRoute(
+								name: "default",
+								pattern: "{controller=Home}/{action=Index}/{id?}");
+							endpoints.MapControllerRoute(
+				name: "articles",
+				pattern: "{controller=Articles}/{action=Add}/{id?}");
+
+							endpoints.MapRazorPages();
+
+
+
+						});*/
+			app.UseMvc(routes =>
 			{
-				endpoints.MapControllers();
-
-				endpoints.MapControllerRoute(
-					name: "default",
-					pattern: "{controller=Home}/{action=Index}/{id?}");
-				endpoints.MapControllerRoute(
-	name: "articles",
-	pattern: "{controller=Articles}/{action=Add}/{id?}");
-
-				endpoints.MapRazorPages();
-				
-				
-				
+				routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
 			});
 
 		}

@@ -1,12 +1,16 @@
-﻿@page
+﻿@model IEnumerable<cscoreweb.Data.Entities.Article>
+
 <html>
-<head></head>
+<head>
+<title>Home Index</title>
+</head>
 <body>
 <div class="float-left">
 <partial name="AddArticle.cshtml" />
 </div>
 <div class="text-center">
-    <partial name="articles.cshtml" />
+@await Html.PartialAsync("articles", @Model);
 </div>
+ <div class="text-right"></div>
 </body>
 </html>
