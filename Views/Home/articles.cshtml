@@ -3,17 +3,17 @@
 <html>
 <head>
     <title>Articles</title>
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
 
     <h2>Articles</h2>
-    <div class="text-center">
+    <div 
+    <div class="list">
     @foreach (var article in @Model)
     {
-        <div class="text-center">
         <h3>@article.Title</h3>
         <p align="center">@article.Content</p>
-        </div>
     }
 </div>
 </body>

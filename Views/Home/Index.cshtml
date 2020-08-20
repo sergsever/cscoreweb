@@ -2,15 +2,21 @@
 
 <html>
 <head>
-<title>Home Index</title>
+    <title>Articles</title>
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-<div class="float-left">
-<partial name="AddArticle.cshtml" />
-</div>
-<div class="text-center">
-@await Html.PartialAsync("articles", @Model);
-</div>
- <div class="text-right"></div>
+    <div class="row">
+        <div class="column">
+        <partial name="AddArticle.cshtml" />
+
+        </div>
+        <div class="column">
+            @await Html.PartialAsync("articles", @Model)
+
+        </div>
+    </div>
+
+
 </body>
 </html>
