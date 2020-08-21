@@ -71,8 +71,10 @@ body {
 }
 
 .column {
-    float: left;
-    width: 50%;
+    width: 30%;
+    background-color: lawngreen;
+    color: black;
+    border-left: black solid 1px;
 }
 
 /* Clear floats after the columns */
@@ -83,8 +85,16 @@ body {
 }
 
 .list {
-    width:30%;
+    width:100%;
     text-align:center;
+    float:right;
+}
+
+.listitem {
+    width: 100%;
+    text-align:center;
+    
+    background-color:darkseagreen;
 }
 
 

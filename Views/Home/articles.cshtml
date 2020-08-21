@@ -8,12 +8,14 @@
 <body>
 
     <h2>Articles</h2>
-    <div 
+    
     <div class="list">
     @foreach (var article in @Model)
     {
-        <h3>@article.Title</h3>
-        <p align="center">@article.Content</p>
+        <div class="listitem">
+        <h3 >@article.Title</h3>
+        <p>@article.Content</p>
+        </div>
     }
 </div>
 </body>
